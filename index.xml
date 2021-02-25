@@ -11,11 +11,11 @@
     
     <item>
       <title></title>
-      <link>http://s21-comp350-CSUCI.github.io/BackEnd/Test/</link>
+      <link>http://s21-comp350-CSUCI.github.io/BackEnd/Sams-SSH-Article/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://s21-comp350-CSUCI.github.io/BackEnd/Test/</guid>
-      <description>#This is a test page</description>
+      <guid>http://s21-comp350-CSUCI.github.io/BackEnd/Sams-SSH-Article/</guid>
+      <description>SSHelling into the VPC through the Bastion Hopefully this will take some of the guess work out of using SSH to access resources on the VPC through the bastion. I will demonstrate how to add the bastion key with an additional key for some resource in our cloud. Any resource we would like to access will have an associated key and we will need that key to ssh into it. The instructions scale, so it is no different for 3 or 9000+ keys.</description>
     </item>
     
     <item>
