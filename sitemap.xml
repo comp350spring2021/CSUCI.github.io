@@ -3,31 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost/BackEnd/Test/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/BackEnd/Test/</loc>
   </url>
   
   <url>
-    <loc>http://localhost/FrontEnd/Test/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/FrontEnd/Test/</loc>
   </url>
   
   <url>
-    <loc>http://localhost/backend/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/backend/</loc>
   </url>
   
   <url>
-    <loc>http://localhost/categories/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>http://localhost/frontend/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/frontend/</loc>
   </url>
   
   <url>
-    <loc>http://localhost/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/</loc>
   </url>
   
   <url>
-    <loc>http://localhost/tags/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/tags/</loc>
   </url>
   
 </urlset>
