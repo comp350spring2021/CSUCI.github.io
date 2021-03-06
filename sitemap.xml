@@ -23,11 +23,19 @@
   </url>
   
   <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Tutorials/GitHub-Desktop/</loc>
+  </url>
+  
+  <url>
     <loc>http://s21-comp350-CSUCI.github.io/</loc>
   </url>
   
   <url>
     <loc>http://s21-comp350-CSUCI.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/tutorials/</loc>
   </url>
   
 </urlset>
