@@ -28,13 +28,12 @@
     </item>
     
     <item>
-      <title></title>
+      <title>git and GitHub</title>
       <link>http://s21-comp350-CSUCI.github.io/Tutorials/Understanding-Git-and-Git-Hub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://s21-comp350-CSUCI.github.io/Tutorials/Understanding-Git-and-Git-Hub/</guid>
-      <description>Understanding Git and Git Hub Git and GitHub are not the same thing First lets get into what git and GitHub are and what the differences are.
-Git Git is a command line version control software that lets you track changes in your code through something called commits. Say you are working on a project, and you get to a point where your code works but you want to implement more features.</description>
+      <description>Git and GitHub are not the same thing  Git GitHub   Lets Start With the Basics of Git  git init git add git commit, git log git reset, git checkout git revert   git branch  Creating a branch Merging   GitHub  Forking git clone git push       Git and GitHub are not the same thing First lets get into what git and GitHub are and what the differences are.</description>
     </item>
     
     <item>

@@ -11,10 +11,6 @@
   </url>
   
   <url>
-    <loc>http://s21-comp350-CSUCI.github.io/Tutorials/Understanding-Git-and-Git-Hub/</loc>
-  </url>
-  
-  <url>
     <loc>http://s21-comp350-CSUCI.github.io/backend/</loc>
   </url>
   
@@ -24,6 +20,10 @@
   
   <url>
     <loc>http://s21-comp350-CSUCI.github.io/frontend/</loc>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Tutorials/Understanding-Git-and-Git-Hub/</loc>
   </url>
   
   <url>
