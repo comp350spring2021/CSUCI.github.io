@@ -3,20 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://s21-comp350-CSUCI.github.io/BackEnd/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://s21-comp350-CSUCI.github.io/FrontEnd/Sams-SSH-Article/</loc>
+    <loc>http://s21-comp350-CSUCI.github.io/Back-End/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Back-End/DockerTest/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Back-End/ExampleSubmissionJSON/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Front-End/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Front-End/CreatingANewEvent/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Front-End/ModifyingAnEvent/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Front-End/StudentSubmisions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://s21-comp350-CSUCI.github.io/Tutorials/Sams-SSH-Article/</loc>
   </url>
   
   <url>
     <loc>http://s21-comp350-CSUCI.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://s21-comp350-CSUCI.github.io/frontend/</loc>
   </url>
   
   <url>
@@ -25,10 +56,6 @@
   
   <url>
     <loc>http://s21-comp350-CSUCI.github.io/Tutorials/GitHub-Desktop/</loc>
-  </url>
-  
-  <url>
-    <loc>http://s21-comp350-CSUCI.github.io/</loc>
   </url>
   
   <url>

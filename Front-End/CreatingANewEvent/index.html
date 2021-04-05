@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Git and GitHub">
+<meta name="description" content="Creating a New Event">
 
-<title>Git and GitHub | Submitter</title>
+<title>Creating a New Event | Submitter</title>
 
 <link rel="icon" href="/favicon/favicon-32x32.png" type="image/x-icon">
 
@@ -192,7 +192,7 @@
             
             
                 <span class="flex">
-                    <a href="/Front-End/CreatingANewEvent/" class="gdoc-nav__entry ">
+                    <a href="/Front-End/CreatingANewEvent/" class="gdoc-nav__entry is-active">
                         Creating a New Event
                     </a>
                 </span>
@@ -318,7 +318,7 @@
             
             
                 <span class="flex">
-                    <a href="/Tutorials/Understanding-Git-and-Git-Hub/" class="gdoc-nav__entry is-active">
+                    <a href="/Tutorials/Understanding-Git-and-Git-Hub/" class="gdoc-nav__entry ">
                         Git and GitHub
                     </a>
                 </span>
@@ -399,204 +399,8 @@
 
 
     <article class="gdoc-markdown">
-        <h1>Git and GitHub</h1>
-        
-
-
-  <div class="gdoc-toc gdoc-toc__level--3"><nav id="TableOfContents"><ul>
-        <li><a href="#git-and-github-are-not-the-same-thing">Git and GitHub are not the same thing</a>
-          <ul>
-            <li><a href="#git">Git</a></li>
-            <li><a href="#github">GitHub</a></li>
-          </ul>
-        </li>
-        <li><a href="#lets-start-with-the-basics-of-git">Lets Start With the Basics of Git</a>
-          <ul>
-            <li><a href="#git-init">git init</a></li>
-            <li><a href="#git-add">git add</a></li>
-            <li><a href="#git-commit-git-log">git commit, git log</a></li>
-            <li><a href="#git-reset-git-checkout">git reset, git checkout</a></li>
-            <li><a href="#git-revert">git revert</a></li>
-          </ul>
-        </li>
-        <li><a href="#git-branch">git branch</a>
-          <ul>
-            <li><a href="#creating-a-branch">Creating a branch</a></li>
-            <li><a href="#merging">Merging</a></li>
-          </ul>
-        </li>
-        <li><a href="#github-1">GitHub</a>
-          <ul>
-            <li><a href="#forking">Forking</a></li>
-            <li><a href="#git-clone">git clone</a></li>
-            <li><a href="#git-push">git push</a></li>
-          </ul>
-        </li>
-      </ul></nav><hr></div>
-
-
-<h2 id="git-and-github-are-not-the-same-thing">Git and GitHub are not the same thing</h2>
-<p>First lets get into what git and GitHub are and what the differences are.</p>
-<h3 id="git">Git</h3>
-<p>Git is a command line version control software that lets you track changes in your code through something called commits. Say you are working on a project, and you get to a point where your code works but you want to implement more features. You may want to save your project at this state, so you can go back to it. Well with git, you can make something called a <strong>commit</strong> that saves your work at that point.</p>
-<p>Then you can go on and continue with your project and keep implementing features and committing the changes as you successfully complete features. However you&rsquo;ve reached a point where the feature you&rsquo;ve implemented breaks your program, and you want to go back to when your project worked. This is the beauty of git, you can revert back to one of your previous commits. There are other features within git as we will  <strong>git</strong> into later.</p>
-<h3 id="github">GitHub</h3>
-<p>Github is for collaboration between developers.</p>
-<p>Lets take the previous scenario where you are working on your project and you decide you need help. You can email all your source code to everyone else you want to work with, OR you can upload to GitHub and allow anyone who wants to add features to your project to <strong>clone</strong> your code on their own machines at home.</p>
-<h2 id="lets-start-with-the-basics-of-git">Lets Start With the Basics of Git</h2>
-<p>First make sure you have Git,  This guide is written for those using Linux or Mac OS. If you&rsquo;re on windows you will need to download git, but the commands will be the same.</p>
-<p>Check what version you have with:</p>
-<pre><code>Git --version
-</code></pre><p>If you get an output  with a version number you have git installed, on mac if your don&rsquo;t have git already it will prompt you to install it. On Linux you will need to  use <code>sudo apt-get install git all</code> or use your package manager for your given distro.</p>
-<h3 id="git-init">git init</h3>
-<p>Before you can do anything with git, you have to initialize the repository. Lets make a fake project.</p>
-<p><img src="/images/gitInit.png" alt="gitInit"  />
-</p>
-<p>In this picture you can see that I have created a project that lives in the directory <code>my-git-project</code> with one python file that prints hello world., and I have initialized the repository. Git can now be used within this folder and will track the changes to all files within the directory.</p>
-<h3 id="git-add">git add</h3>
-<p>Now that we have the repository set-up we can  start adding files to the staging area. When using git, every-time you make changes to a file git tracks those changes, and before we can make a commit we mst put the files into the staging area with <code>git add </code></p>
-<p><img src="/images/gitaddgitstatus.png" alt="gitaddgitstatus"  />
-</p>
-<p>In this picture you can see that I added the <code>helloWorld.py</code> to the staging area with <code>git add *</code> the <code>*</code> just means all the files that have been edited since the last commit or in this case since I initialized.</p>
-<p>Then I used the command <code>git status</code> to see what files were in the staging area and you can see that <code>helloWorld.py</code> is not in the staging area. However after I created the <code>newFile.py</code>  and used <code>git status again</code>  you can see that <code>newFile.py</code> is NOT in the staging area because I did not use <code>git add </code> to place it in the staging area.</p>
-<p>Notes:</p>
-<ul>
-<li>You don&rsquo;t need to add all files to the staging area, there are other options that can be used to add single files to the staging area with <code>git add &lt;filename&gt;</code></li>
-<li>to remove files from the staging area use <code>git rm</code></li>
-</ul>
-<h3 id="git-commit-git-log">git commit, git log</h3>
-<p>git commit is the bread and butter of git. This basically lets us take a &ldquo;snapshot&rdquo; of our code at that moment of time. kind of like saving but we can revert back to this save spot later. lets use the command <code>git commit -m </code> to commit our code to the master branch.</p>
-<p>note: the <code>-m</code> stands for message, this allows us to attach a message to the commit, try to be descriptive with your messages.</p>
-<p><img src="/images/gitCommit.png" alt="gitCommit"  />
-</p>
-<p>Above I committed the <code>helloWorld.py</code> , then added  <code>newFile.py</code> to the staging area and committed that file as well.</p>
-<p><img src="/images/addedLines.png" alt="addedLines"  />
-</p>
-<p><img src="/images/gitlogaddedlines.png" alt="gitlogaddedlines"  />
-</p>
-<p>Now Ive added some code to <code>newFile.py</code> and committed the changes , but lets say that for some reason that I didn&rsquo;t want these changes anymore, because Ive decided to take the project in a new direction and I know that at the second commit I  had a clean <code>newFile.py</code></p>
-<h3 id="git-reset-git-checkout">git reset, git checkout</h3>
-<p>Notice in the picture above, each commit has a long string of characters next to it. These are unique hashes for each of our commits, you can think of them like nodes along the chain representing a previous &ldquo;save&rdquo; state. Say we wanted to get rid of the code that we wrote in the <code>newFile.py</code>.  To do that first we need to a <code>git reset</code></p>
-<p><img src="/images/gitReset.png" alt="gitReset"  />
-</p>
-<p>Notice that when we do a git reset, we use the hash of the commit that we want to move to. However we need to do one more thing. If you were to open up <code>newFile.py</code> you might expect an empty folder with no code, however this is not the case, when I open up the new file my code still looks like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s2">&#34;is a new file&#34;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&#34;im gonna remove these changes&#34;</span><span class="p">)</span>
-
-</code></pre></div><ul>
-<li>git reset can be a dangerous command because it completely gets rid of the all the commits after the one you reset it to. This is why it does not change the files, or in this case why the lines of code were still in <code>newFile.py</code> after it was reset. For example say you did the reset on accident or reset to the wrong commit, you could <code>git ad .</code> then <code>git commit -m</code> to not completely lose the code you wrote.  To actually change the files within your working directory keep reading.</li>
-</ul>
-<p>We need one more step to change the files in the working directory, the <code>git checkout</code>, a couple things to note  about git checkout here:</p>
-<ul>
-<li>
-<p>After this all the changes to <code>newFile.py</code> were gone and because it was an empty file before the commit, its empty again now</p>
-</li>
-<li>
-<p>Notice that I used the hash that the HEAD was currently out</p>
-</li>
-<li>
-<p>I specify what files I wanted to change with <code>-- newFile.py</code>, if you forget this you will get into a detached head state which can be hard to fix</p>
-</li>
-</ul>
-<p><img src="/images/git-checkout.png" alt="git-checkout"  />
-</p>
-<p>NOTE: to do both of the above in one step do <code>git resest &lt;hash&gt; --hard</code> . More dangerous this way but faster.</p>
-<h3 id="git-revert">git revert</h3>
-<p>git revert is another way to  revert your code back to the following. Im gonna make this part quick, heres the changes i made:</p>
-<ul>
-<li>
-<p><code>helloWorld.py</code> changed to look like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-  <span class="k">print</span><span class="p">(</span><span class="s2">&#34;hello world&#34;</span><span class="p">)</span>
-  
-  
-</code></pre></div></li>
-<li>
-<p>Committed changes to <code>helloWorld.py</code></p>
-</li>
-<li>
-<p><code>newFile.py</code> looks like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s2">&#34;hey im new file&#34;</span><span class="p">)</span>
-</code></pre></div></li>
-<li>
-<p>committed changes to <code>newFile.py</code></p>
-</li>
-</ul>
-<p>my git log after all of the following now looks like this:</p>
-<p><img src="/images/git-revert-log.png" alt="git-revert-log"  />
-</p>
-<p>lets revert to the  <code>3fdcdd2</code> hash with <code>git revert 3fdcdd2</code> and we have the following <code>git log</code> :</p>
-<p><img src="/images/git-revert-2.png" alt="git-revert-2"  />
-</p>
-<p>Notice that the commits aren&rsquo;t gone with revert, but instead another is added with the message &ldquo;revert &hellip;.&rdquo; this is because we are simply undoing the commit at that hash so my files now look like this:</p>
-<p><code>newFile.py</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s2">&#34;hey im new file&#34;</span><span class="p">)</span>
-
-</code></pre></div><p><code>helloWorld.py</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">print</span><span class="p">(</span><span class="s2">&#34;hello world&#34;</span><span class="p">)</span>
-
-</code></pre></div><p>Notice that the changes I made to the <code>newFile.py</code> stayed while the changes I made to the <code>helloWorld.py</code> were undone. this</p>
-<h2 id="git-branch">git branch</h2>
-<p>branching is where the real power of git really lies, This allows you to take your project in different directions without messing up other branches. Up until now we&rsquo;ve been working with git in a very linear fashion, lets try branching.</p>
-<h3 id="creating-a-branch">Creating a branch</h3>
-<p>use the following commands to create a branch and witch to the branch. Lets pretend we&rsquo;ve had an idea for a new feature.</p>
-<p><code>git branch myNewFeature</code></p>
-<p><code>git checkout myNewFeature</code></p>
-<p>Now I have the following <code>git log --oneline</code>:</p>
-<p><img src="/images/git-branch-1.png" alt="git-branch-1"  />
-</p>
-<p>you can see here that the HEAD points at the new branch <code>myNewFeature</code> . Anything we did before on the master branch we can now do on our new branch. for example, lets create a new feature file.</p>
-<p><img src="/images/newfeatureadded.png" alt="newfeatureadded"  />
-</p>
-<p>above you can see that our new feature has been added to the new branch. If we like the new feature, and are ready to commit it to the master branch we can merge them together.</p>
-<h3 id="merging">Merging</h3>
-<p>Because we may have multiple branches we may want to see all of the branches currently open. To do that use <code>git branch</code>. Notice the star, that tells you what branch you are currently on.</p>
-<p><img src="/images/viewingBranches.png" alt="viewingBranches"  />
-</p>
-<p>Now on to merging <code>myNewFeature</code> with <code>master</code>. First you need to switch to the master branch, then merge the desired branch into master.</p>
-<p><img src="/images/mergedBranches.png" alt="mergedBranches"  />
-</p>
-<p>You will notice here that the <code>myNewFeature</code> branch is still there, you can either keep developing on that branch or delete it with <code>git branch -d myNewFeature</code></p>
-<h2 id="github-1">GitHub</h2>
-<p>Now lets move on to GitHub.</p>
-<p>The core functionality of GitHub lies with its ability to allow you to fork other peoples repositories, and then start working on them on your own machine. were going to do a quick tutorial on how we can fork our submitter code.</p>
-<h3 id="forking">Forking</h3>
-<p>Go to the submitter repository shown below.</p>
-<p><img src="/images/githubbranches.png" alt="githubbranches"  />
-</p>
-<p>Then go ahead and click the fork button and choose to fork the project to your own personal machine. Ive already done so, which is why you can see the little one by the fork button in the top right.</p>
-<p>Now I need to go to my forked repository on my own personal GitHub account to clone the  repo to my computer to get to work.</p>
-<ul>
-<li>notice the forks on the left menu, when we bring the repository onto our own machines all of these branches will exist.</li>
-</ul>
-<h3 id="git-clone">git clone</h3>
-<p>There are multiple ways to clone a repository to your machine, I will show you how using git and the terminal.</p>
-<p><img src="/images/githubclone.png" alt="githubclone"  />
-</p>
-<p>you can see that I am on my personal GitHub looking at my forked version of the Comp350-Submitter repo, and notice that little link underneath clone, thats the link I am going to use with GitHub to clone the repository, shown below.</p>
-<p><img src="/gitcloneterminal.png" alt="gitcloneterminal"  />
-</p>
-<p>Because we cloned this repo from GitHub it is already a git repository, so there is no need to use <code>git init</code>. Cd into the project folder wherever you cloned it, and do a <code>git branch -a</code></p>
-<p><img src="/images/projectBranches.png" alt="projectBranches"  />
-</p>
-<p>notice that all of the branches exist, but these are known as remote branches, you cant  make commits to these branches. We need to make our own local branch, that tracks a remote branch. I am part of the front end team so I did the following:</p>
-<p><img src="/images/gittracking.png" alt="gittracking"  />
-</p>
-<p><img src="/images/brancheswithtracking.png" alt="brancheswithtracking"  />
-</p>
-<p>Now I have my own front end branch to work so lets try to make some changes.</p>
-<h3 id="git-push">git push</h3>
-<p><img src="/images/readmechange.png" alt="readmechange"  />
-</p>
-<p>After committing these changes to my local front end branch I was able to push them to my forked version of the GitHub repository, on my personal GitHub account, with <code>git push</code></p>
-<p><img src="/images/pushingrepo.png" alt="pushingrepo"  />
-</p>
-<p>and here are the changes on the GitHub repo</p>
-<p>![githubshowing changes](/images/githubshowing changes.png)</p>
-<p>If I am really happy with my changes I can go and create a pull request for my changes to be put into the official submitter repository. To do this got to the submitter repository on the organization and  hit <strong>new pull request</strong>, and compare across forks. you should get a page that looks like this:</p>
-<p><img src="/images/pullrequest.png" alt="pullrequest"  />
-</p>
-<p>I can then hit create pull request and someone will review my changes and either confirm or accept them. If they accept then the changes will be added into the organizations code base.</p>
+        <h1>Creating a New Event</h1>
+        <h2 id="migrate-md-file">Migrate .md file</h2>
 
 
     </article>

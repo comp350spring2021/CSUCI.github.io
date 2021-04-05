@@ -5,9 +5,9 @@
 	<meta name="generator" content="Hugo 0.68.3" />
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Submitter">
+<meta name="description" content="">
 
-<title>Submitter | Submitter</title>
+<title> | Submitter</title>
 
 <link rel="icon" href="/favicon/favicon-32x32.png" type="image/x-icon">
 
@@ -89,30 +89,10 @@
             
             
                 <span class="flex">
-                    <a href="/BackEnd/" class="gdoc-nav__entry ">
+                    <a href="/Back-End/" class="gdoc-nav__entry ">
                         Back End
                     </a>
                 </span>
-            
-            
-
-            
-            </li>
-            
-            
-            
-
-            
-            
-            
-            
-            
-            
-
-            <li>
-            
-            
-                <span class="flex">FrontEnd</span>
             
             
 
@@ -136,8 +116,134 @@
             
             
                 <span class="flex">
-                    <a href="/FrontEnd/Sams-SSH-Article/" class="gdoc-nav__entry ">
-                        Sams Ssh Article
+                    <a href="/Back-End/DockerTest/" class="gdoc-nav__entry ">
+                        Docker Test
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
+                    <a href="/Back-End/ExampleSubmissionJSON/" class="gdoc-nav__entry ">
+                        Example Submission Json
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+        
+    </ul>
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">Front End</span>
+            
+            
+
+            
+                
+    
+
+    <ul class="gdoc-nav__list">
+        
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
+                    <a href="/Front-End/CreatingANewEvent/" class="gdoc-nav__entry ">
+                        Creating a New Event
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
+                    <a href="/Front-End/ModifyingAnEvent/" class="gdoc-nav__entry ">
+                        Modifying an Event
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
+                    <a href="/Front-End/StudentSubmisions/" class="gdoc-nav__entry ">
+                        Student Submisions
                     </a>
                 </span>
             
@@ -190,8 +296,32 @@
             
             
                 <span class="flex">
+                    <a href="/Tutorials/Sams-SSH-Article/" class="gdoc-nav__entry ">
+                        Sams Ssh Article
+                    </a>
+                </span>
+            
+            
+
+            
+            </li>
+            
+            
+            
+
+            
+            
+            
+            
+            
+            
+
+            <li>
+            
+            
+                <span class="flex">
                     <a href="/Tutorials/Understanding-Git-and-Git-Hub/" class="gdoc-nav__entry ">
-                        git and GitHub
+                        Git and GitHub
                     </a>
                 </span>
             
@@ -270,8 +400,90 @@
 </div>
 
     <article class="gdoc-markdown">
-        <h1>Submitter</h1>
-        
+        <h1></h1>
+        <h1 id="submitter-overview">Submitter Overview</h1>
+<p><strong>Author: Alex Sullivan</strong><br>
+<strong>last updated: 4/4/2021</strong></p>
+
+
+
+  <div class="gdoc-toc gdoc-toc__level--3"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#submitter-overview">Submitter Overview</a>
+      <ul>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#front-end">Front-End</a>
+          <ul>
+            <li><a href="#administrators">Administrators</a></li>
+            <li><a href="#students">Students</a></li>
+          </ul>
+        </li>
+        <li><a href="#back-end">Back End</a></li>
+      </ul></nav><hr></div>
+
+
+<p>The submitter is a web application implemented With AWS cloud services, designed to work as an automatice grader for python programming assignments. Designed and built in Spring 2021, for Software Engineering (Comp 350) at California State University Channel Islands, with Professor Soltys.</p>
+<h2 id="description">Description</h2>
+<p>The submitter project consists, of a website used by administrators to create <strong>events</strong>, either for a class or a competitive coding competition. Students, or participants can then submit answers to various <strong>assignments</strong> assoicated with an event. Admins can create an account, in order to create, and modify events, as well as monitor student submissions.</p>
+<p>Students can submit their code via the web site where it is passed to a backend server and run against pre determined test cases provided by the event admin. Students are given immediate feedback through email detailing the results of the test cases, grade cases are hidden from students until the end of the event.</p>
+<h2 id="front-end">Front-End</h2>
+<p>The front end consists of a website hosted on an AWS ec2 instance, we decided to use django as our framework of choice for the webserver.</p>
+<h3 id="administrators">Administrators</h3>
+<p>Administrators have the following  abilities within the front end interface:</p>
+<ul>
+<li>Create an event</li>
+<li>Modify an event or assoicated assignments</li>
+<li>View student submission grades</li>
+</ul>
+<p><strong>Event Creation</strong></p>
+<p>When an admin creates an event the following information is given:</p>
+<ul>
+<li>Event Name</li>
+<li>Due date</li>
+<li>student email addresses</li>
+<li>Team size</li>
+<li>Assignment info
+<ul>
+<li>Assignment Due date</li>
+<li>Test case input, and expected output</li>
+<li>Grade case input and expected output</li>
+</ul>
+</li>
+</ul>
+<p>When an assignment is created, a unique token is created for <em>each</em> student for <em>each</em> assignment, thus if there are 5 assigments within the event then each student will recieve 5 separate tokens to submit there work.</p>
+<p><strong>Event Modification</strong></p>
+<p>When an admin is trying to modify an event they will need to log in, then they will be able to view there open events. When an event is chosen, fields will poulate with the <em>current</em> event information. The fields can be changed and then submitted to the RDS.</p>
+<h3 id="students">Students</h3>
+<p>Students have very limited abilities, and do not even require an account. Via the frontend students can only do the following:</p>
+<ul>
+<li>Submit token(s) and a <code>.py</code> python file for each event they are enrolled in</li>
+</ul>
+<p><strong>Student Submission</strong></p>
+<p>Students, can submit code via a unique token for <em>each</em> assignment in which they are associated with. Students, can work alone or in groups depending on the event rules. If a student is working within a group one student can submit with all of their group members tokens. If they are working alone, then the student can submit with just their own token.</p>
+<p>Once the tokens are submitted the RDS is checked to make sure that all of the tokens submitted are associated with the same assignment. If the tokens validated successfully, then the students can submit their <code>.py</code> file. When the python file is submitted, a submission id is generated along with a <code>json</code> file containing:</p>
+<ul>
+<li>Submission ID</li>
+<li>admin</li>
+<li>event</li>
+<li>problem</li>
+<li>Tokens</li>
+</ul>
+<p>Both the submission json and the python file are placed within an S3 bucket at which point the back end takes over.</p>
+<h2 id="back-end">Back End</h2>
+<p>The back end consists of several major parts and AWS serviced including the following:</p>
+<ul>
+<li><em>AWS Lambda</em> function</li>
+<li><em>AWS SQS</em></li>
+<li><em>AWS SNS</em></li>
+<li>ec2 instance</li>
+</ul>
+<p>Rather than explain each of these services in isloation the backend makes more sense described as a chronological sequence of events after a submission from the front end.
+Once the submission is placed within the S3 bucket an AWS lambda function is triggered. This generates a json message for the sqs queue.</p>
+<p>Once Within the SQS queue, that is when our own library of code comes in. The EC2 instance pulls from the message from the queue, and retrieves the associated <code>submission.json</code> and the students code that goes along with that submission.</p>
+<p>Test inputs and there expected outputs are then queried from the database, and files used for comparison are generated. For example we may create a <code>test.in</code> for input to the program and a <code>test.out</code> to compare the student programs output with.</p>
+<p>All of the execution of student code, happens with a docker container in order to sandbox student code. As running unsanitized code directly within an AWS is a large security risk.</p>
+<p>Once the student code has finished running and the output has been written to a file, the output is placed back into the S3 bucket. That file can at that point be delivered via email to all students who&rsquo;s tokens are associated with the submission or, we may try to recieve the output on the front end to display via the web app.</p>
+
 
     </article>
 
@@ -287,50 +499,6 @@
     
     
 
-    
-        
-        
-
-        
-        
-            
-            
-            
-
-            
-
-            
-
-            
-        
-
-        
-        
-            
-    
-    
-
-    
-        
-        
-
-        
-        
-
-        
-        
-    
-
-        
-    
-        
-        
-
-        
-        
-
-        
-        
     
 
 
